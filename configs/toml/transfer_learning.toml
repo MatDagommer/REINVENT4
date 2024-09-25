@@ -5,9 +5,9 @@
 
 
 run_type = "transfer_learning"
-device = "cuda:0"  # set torch device e.g. "cpu"
+device = "mps"  # set torch device e.g. "cpu"
 tb_logdir = "tb_TL"  # name of the TensorBoard logging directory
-json_out_config = "json_transfer_learning.json"  # write this TOML to JSON
+json_out_config = "artifacts/exps/json_transfer_learning.json"  # write this TOML to JSON
 
 
 [parameters]
@@ -23,14 +23,14 @@ sample_batch_size = 100  # number of sampled molecules to compute sample loss
 
 ## Reinvent
 #input_model_file = "priors/reinvent.prior"
-#smiles_file = "TL_reinvent_100.smi"  # read 1st column
-#output_model_file = "TL_reinvent.model"
+#smiles_file = "configs/TL_reinvent_100.smi"  # read 1st column
+#output_model_file = "artifacts/exps/TL_reinvent.model"
 #validation_smiles_file = "TL_reinvent_100.smi"  
 
 ## Mol2Mol
 input_model_file = "priors/mol2mol_scaffold_generic.prior"
 smiles_file = "compounds.smi"  # read 1st column
-output_model_file = "TL_Mol2Mol.model"
+output_model_file = "artifacts/exps/TL_Mol2Mol.model"
 validation_smiles_file = "validation_compounds.smi"  # read 1st column
 
 # Define the type of similarity and its parameters
@@ -47,10 +47,10 @@ pairs.max_cardinality = 199
 #input_model_file = "priors/libinvent.prior"
 #smiles_file = "TL_libinvent_100.smi"  # read first 2 columns: scaffold, R-groups
 #validation_smiles_file = "TL_libinvent_100.smi"  # read first 2 columns: scaffold, R-groups
-#output_model_file = "TL_libinvent.model"
+#output_model_file = "artifacts/exps/TL_libinvent.model"
 #
 ## LinkInvent
 #input_model_file = "priors/linkinvent.prior"
 #smiles_file = "TL_linkinvent_100.smi"  # read first 2 columns: warheads, linker
-#output_model_file = "TL_linkinvent.model"
+#output_model_file = "artifacts/exps/TL_linkinvent.model"
 #validation_smiles_file = "TL_linkinvent_100.smi"  # read first 2 columns: warheads, linker

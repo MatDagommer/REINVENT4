@@ -4,7 +4,7 @@
 
 run_type = "sampling"
 device = "mps"  # set torch device e.g. "cpu"
-json_out_config = "_sampling.json"  # write this TOML to JSON
+json_out_config = "artifacts/exps/_sampling.json"  # write this TOML to JSON
 
 
 [parameters]
@@ -30,7 +30,7 @@ model_file = "priors/reinvent.prior"
 #temperature = 1.0 # temperature in multinomial sampling
 #tb_logdir = "tb_logs"  # name of the TensorBoard logging directory
 
-output_file = 'sampling.csv'  # sampled SMILES and NLL in CSV format
+output_file = 'artifacts/exps/sampling.csv'  # sampled SMILES and NLL in CSV format
 
 num_smiles = 157  # number of SMILES to be sampled, 1 per input SMILES
 unique_molecules = true  # if true remove all duplicatesd canonicalize smiles

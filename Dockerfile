@@ -22,6 +22,19 @@ RUN pip install --no-cache-dir -r requirements-docker.lock
 # Install REINVENT
 RUN pip install --no-deps .
 
+# Clone and set up DockStream
+RUN git clone https://github.com/MolecularAI/DockStream.git /DockStream && \
+    cd /DockStream && \
+    conda env create -f environment.yml && \
+    conda run -n DockStream /bin/bash -c "\
+        cd \$CONDA_PREFIX && \
+        mkdir -p ./etc/conda/activate.d && \
+        mkdir -p ./etc/conda/deactivate.d && \
+        echo '#!/bin/sh' > ./etc/conda/activate.d/env_vars.sh && \
+        echo 'export OE_LICENSE=/opt/scp/software/oelicense/1.0/oe_license.seq1' >> ./etc/conda/activate.d/env_vars.sh && \
+        echo '#!/bin/sh' > ./etc/conda/deactivate.d/env_vars.sh && \
+        echo 'unset OE_LICENSE' >> ./etc/conda/deactivate.d/env_vars.sh"
+
 # Make port 80 available to the world outside this container
 EXPOSE 80
 

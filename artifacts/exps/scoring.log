@@ -1,0 +1,9 @@
+22:30:00 <INFO> Started REINVENT 4.4.22 (C) AstraZeneca 2017, 2023 on 2024-09-24
+22:30:00 <INFO> Command line: /Users/matthieu/miniconda3/envs/reinvent4/bin/reinvent -l artifacts/exps/scoring.log configs/toml/scoring.toml
+22:30:00 <INFO> User matthieu on host Matthieus-MacBook-Air.local
+22:30:00 <INFO> Python version 3.10.14
+22:30:00 <INFO> PyTorch version 2.3.1, git d44533f9d073df13895333e70b66f81c513c1889
+22:30:00 <INFO> PyTorch compiled with CUDA version None
+22:30:00 <INFO> RDKit version 2022.09.5
+22:30:00 <INFO> Platform macOS-14.5-arm64-arm-64bit
+22:30:00 <INFO> Number of PyTorch CUDA devices 0

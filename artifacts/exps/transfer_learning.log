@@ -1,0 +1,101 @@
+22:33:01 <INFO> Started REINVENT 4.4.22 (C) AstraZeneca 2017, 2023 on 2024-09-24
+22:33:01 <INFO> Command line: /Users/matthieu/miniconda3/envs/reinvent4/bin/reinvent -l artifacts/exps/transfer_learning.log configs/toml/transfer_learning.toml
+22:33:01 <INFO> User matthieu on host Matthieus-MacBook-Air.local
+22:33:01 <INFO> Python version 3.10.14
+22:33:01 <INFO> PyTorch version 2.3.1, git d44533f9d073df13895333e70b66f81c513c1889
+22:33:01 <INFO> PyTorch compiled with CUDA version None
+22:33:01 <INFO> RDKit version 2022.09.5
+22:33:01 <INFO> Platform macOS-14.5-arm64-arm-64bit
+22:33:01 <INFO> Number of PyTorch CUDA devices 0
+22:33:01 <INFO> Using CPU arm
+22:33:01 <INFO> Writing TensorBoard summary to /Users/matthieu/Documents/Github/REINVENT4/tb_TL
+22:33:01 <INFO> Writing JSON config file to /Users/matthieu/Documents/Github/REINVENT4/artifacts/exps/json_transfer_learning.json
+22:33:01 <INFO> Starting Transfer Learning
+22:33:01 <ERRO> /Users/matthieu/Documents/Github/REINVENT4/priors/mol2mol_scaffold_generic.prior has invalid hash:
+{ 'comments': [],
+  'creation_date': 0,
+  'date_format': 'UNIX epoch',
+  'hash_id': '2e9b50a81011b9dcae60e555a73a6144',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.4.1',
+  'model_id': 'dbe73d69456f42f990b955233dc7f514',
+  'model_id_format': 'uuid.uuid4 3.10.12',
+  'origina_data_source': 'ChEMBL 28',
+  'updates': []}
+22:33:02 <INFO> Number of network parameters: 17,462,400
+22:33:02 <INFO> Network architecture:
+EncoderDecoder(
+  (encoder): Encoder(
+    (layers): ModuleList(
+      (0-5): 6 x EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (sublayer): ModuleList(
+          (0-1): 2 x SublayerConnection(
+            (norm): LayerNorm()
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm()
+  )
+  (decoder): Decoder(
+    (layers): ModuleList(
+      (0-5): 6 x DecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (src_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (sublayer): ModuleList(
+          (0-2): 3 x SublayerConnection(
+            (norm): LayerNorm()
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm()
+  )
+  (src_embed): Sequential(
+    (0): Embeddings(
+      (lut): Embedding(128, 256)
+    )
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (tgt_embed): Sequential(
+    (0): Embeddings(
+      (lut): Embedding(128, 256)
+    )
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (generator): Generator(
+    (proj): Linear(in_features=256, out_features=128, bias=True)
+  )
+)
+22:33:02 <INFO> Using generator Mol2Mol

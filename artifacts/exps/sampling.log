@@ -1,0 +1,34 @@
+22:34:57 <INFO> Started REINVENT 4.4.22 (C) AstraZeneca 2017, 2023 on 2024-09-24
+22:34:57 <INFO> Command line: /Users/matthieu/miniconda3/envs/reinvent4/bin/reinvent -l artifacts/exps/sampling.log configs/toml/sampling.toml
+22:34:57 <INFO> User matthieu on host Matthieus-MacBook-Air.local
+22:34:57 <INFO> Python version 3.10.14
+22:34:57 <INFO> PyTorch version 2.3.1, git d44533f9d073df13895333e70b66f81c513c1889
+22:34:57 <INFO> PyTorch compiled with CUDA version None
+22:34:57 <INFO> RDKit version 2022.09.5
+22:34:57 <INFO> Platform macOS-14.5-arm64-arm-64bit
+22:34:57 <INFO> Number of PyTorch CUDA devices 0
+22:34:57 <INFO> Using CPU arm
+22:34:57 <INFO> Writing JSON config file to /Users/matthieu/Documents/Github/REINVENT4/artifacts/exps/_sampling.json
+22:34:57 <INFO> Starting Sampling
+22:34:57 <INFO> /Users/matthieu/Documents/Github/REINVENT4/priors/reinvent.prior has valid hash:
+{ 'comments': [],
+  'creation_date': 0,
+  'date_format': 'UNIX epoch',
+  'hash_id': '173568c36e1fc3d95cab289c7d31ce0b',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.4.1',
+  'model_id': '55d68f8a81c04f5a86304ebe1723a0ea',
+  'model_id_format': 'uuid.uuid4 3.10.12',
+  'origina_data_source': 'ChEMBL 25',
+  'updates': []}
+22:34:57 <INFO> Number of network parameters: 5,805,602
+22:34:57 <INFO> Network architecture:
+RNN(
+  (_embedding): Embedding(34, 256)
+  (_rnn): LSTM(256, 512, num_layers=3, batch_first=True)
+  (_linear): Linear(in_features=512, out_features=34, bias=True)
+)
+22:34:57 <INFO> Using generator Reinvent
+22:34:57 <INFO> Writing sampled SMILES to CSV file artifacts/exps/sampling.csv
+22:34:57 <INFO> Sampling 157 SMILES from model priors/reinvent.prior
+22:34:58 <INFO> Peak main memory usage: 458.172 MiB
+22:34:58 <INFO> Finished REINVENT on 2024-09-24
