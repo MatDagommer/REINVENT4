@@ -4,6 +4,7 @@
 * Alexey Voronov
 * Jon Paul Janet
 * Lewis Mervin
+* Matthieu Dagommer
 
 Contributions to previous releases have been published in the following
 papers.
